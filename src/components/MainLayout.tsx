@@ -1,10 +1,20 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BookOpen, GraduationCap, LineChart, FileText, Projector, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Handle automatic sidebar open/close based on hover
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsSidebarOpen(isHovering);
+    }, 200); // Small delay for smoother interaction
+
+    return () => clearTimeout(timer);
+  }, [isHovering]);
 
   const menuItems = [
     { icon: BookOpen, label: 'Resources', path: '/resources' },
@@ -16,12 +26,21 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="min-h-screen flex bg-background">
+      {/* Hover area for sidebar */}
+      <div
+        className="fixed inset-y-0 left-0 w-2 z-50 cursor-pointer"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      />
+
       {/* Sidebar */}
       <div
         className={cn(
-          "fixed inset-y-0 left-0 z-50 w-64 transform transition-transform duration-300 ease-in-out",
+          "fixed inset-y-0 left-0 z-40 w-64 transform transition-transform duration-300 ease-in-out",
           !isSidebarOpen && "-translate-x-full"
         )}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
       >
         <div className="h-full glass shadow-xl flex flex-col">
           <div className="p-6">
@@ -43,7 +62,10 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 ml-0 lg:ml-64 transition-all duration-300">
+      <div className={cn(
+        "flex-1 transition-all duration-300",
+        isSidebarOpen ? "ml-64" : "ml-0"
+      )}>
         <header className="glass sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
