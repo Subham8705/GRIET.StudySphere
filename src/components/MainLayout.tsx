@@ -1,11 +1,16 @@
 
 import { useState, useEffect } from 'react';
-import { BookOpen, GraduationCap, LineChart, FileText, Projector, Menu } from 'lucide-react';
+import { BookOpen, GraduationCap, LineChart, FileText, Projector, Menu, ArrowLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isHovering, setIsHovering] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   // Handle automatic sidebar open/close based on hover
   useEffect(() => {
@@ -15,6 +20,10 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
     return () => clearTimeout(timer);
   }, [isHovering]);
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
 
   const menuItems = [
     { icon: BookOpen, label: 'Resources', path: '/resources' },
@@ -67,12 +76,27 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         isSidebarOpen ? "ml-64" : "ml-0"
       )}>
         <header className="glass sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
-          <button
-            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="p-2 rounded-lg hover:bg-grit-100/50 transition-colors"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="p-2 rounded-lg hover:bg-grit-100/50 transition-colors"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+            
+            {!isHomePage && (
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={handleGoBack}
+                className="flex items-center gap-1"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Back
+              </Button>
+            )}
+          </div>
+          
           <div className="flex items-center space-x-4">
             <span className="text-sm text-grit-600">Welcome to GRIT Student Resources</span>
           </div>
