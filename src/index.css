@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @tailwind base;
@@ -34,16 +33,23 @@
   }
 
   body {
-    @apply bg-background text-foreground font-[Inter] antialiased;
+    @apply bg-background text-foreground font-[Inter] antialiased transition-colors duration-300;
   }
 }
 
 @layer utilities {
+  /* ✅ Glass Effect */
   .glass {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 dark:bg-white/10 dark:border-white/30;
   }
-  
+
+  /* ✅ Section Padding */
   .section-padding {
     @apply py-12 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ✅ Dark Mode Utilities */
+  .dark-bg {
+    @apply bg-background text-foreground;
   }
 }

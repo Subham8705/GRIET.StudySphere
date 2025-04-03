@@ -1,10 +1,8 @@
-
 import MainLayout from '../components/MainLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const Placements = () => {
-  // Sample placement data based on publicly available information
   const yearWisePlacements = [
     { year: '2019', placements: 850, companies: 120 },
     { year: '2020', placements: 920, companies: 135 },
@@ -23,16 +21,8 @@ const Placements = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
   const topCompanies = [
-    "Microsoft",
-    "Amazon",
-    "Infosys",
-    "TCS",
-    "Wipro",
-    "Accenture",
-    "Cognizant",
-    "IBM",
-    "Tech Mahindra",
-    "Capgemini"
+    "Microsoft", "Amazon", "Infosys", "TCS", "Wipro",
+    "Accenture", "Cognizant", "IBM", "Tech Mahindra", "Capgemini"
   ];
 
   const salaryRanges = [
@@ -45,43 +35,43 @@ const Placements = () => {
   return (
     <MainLayout>
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">GRIET Placement Analysis</h1>
+        <h1 className="text-3xl font-bold mb-8 dark:text-white">GRIET Placement Analysis</h1>
         
         {/* Key Statistics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Card className="glass">
+          <Card className="glass dark:bg-gray-800">
             <CardHeader>
-              <CardTitle>Average Placement Rate</CardTitle>
+              <CardTitle className="dark:text-white">Average Placement Rate</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold">95%</p>
-              <p className="text-sm text-muted-foreground">Last 5 years</p>
+              <p className="text-4xl font-bold dark:text-gray-300">95%</p>
+              <p className="text-sm text-muted-foreground dark:text-gray-400">Last 5 years</p>
             </CardContent>
           </Card>
-          <Card className="glass">
+          <Card className="glass dark:bg-gray-800">
             <CardHeader>
-              <CardTitle>Highest Package</CardTitle>
+              <CardTitle className="dark:text-white">Highest Package</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold">45 LPA</p>
-              <p className="text-sm text-muted-foreground">2023 Batch</p>
+              <p className="text-4xl font-bold dark:text-gray-300">45 LPA</p>
+              <p className="text-sm text-muted-foreground dark:text-gray-400">2023 Batch</p>
             </CardContent>
           </Card>
-          <Card className="glass">
+          <Card className="glass dark:bg-gray-800">
             <CardHeader>
-              <CardTitle>Average Package</CardTitle>
+              <CardTitle className="dark:text-white">Average Package</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold">6.5 LPA</p>
-              <p className="text-sm text-muted-foreground">2023 Batch</p>
+              <p className="text-4xl font-bold dark:text-gray-300">6.5 LPA</p>
+              <p className="text-sm text-muted-foreground dark:text-gray-400">2023 Batch</p>
             </CardContent>
           </Card>
         </div>
 
         {/* Year-wise Placements Chart */}
-        <Card className="glass mb-8">
+        <Card className="glass mb-8 dark:bg-gray-800">
           <CardHeader>
-            <CardTitle>Year-wise Placement Statistics</CardTitle>
+            <CardTitle className="dark:text-white">Year-wise Placement Statistics</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="h-[400px]">
@@ -103,9 +93,9 @@ const Placements = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Sector-wise Distribution */}
-          <Card className="glass">
+          <Card className="glass dark:bg-gray-800">
             <CardHeader>
-              <CardTitle>Sector-wise Distribution</CardTitle>
+              <CardTitle className="dark:text-white">Sector-wise Distribution</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="h-[300px]">
@@ -133,9 +123,9 @@ const Placements = () => {
           </Card>
 
           {/* Salary Distribution */}
-          <Card className="glass">
+          <Card className="glass dark:bg-gray-800">
             <CardHeader>
-              <CardTitle>Salary Distribution</CardTitle>
+              <CardTitle className="dark:text-white">Salary Distribution</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="h-[300px]">
@@ -154,14 +144,14 @@ const Placements = () => {
         </div>
 
         {/* Top Recruiting Companies */}
-        <Card className="glass">
+        <Card className="glass dark:bg-gray-800">
           <CardHeader>
-            <CardTitle>Top Recruiting Companies</CardTitle>
+            <CardTitle className="dark:text-white">Top Recruiting Companies</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {topCompanies.map((company, index) => (
-                <div key={index} className="text-center p-4 rounded-lg bg-muted">
+                <div key={index} className="text-center p-4 rounded-lg bg-muted dark:bg-gray-700 dark:text-white">
                   {company}
                 </div>
               ))}

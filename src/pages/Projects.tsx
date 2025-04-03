@@ -1,4 +1,3 @@
-
 import MainLayout from "@/components/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -88,34 +87,34 @@ const Projects = () => {
   return (
     <MainLayout>
       <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-8">Student Projects Showcase</h1>
+        <h1 className="text-3xl font-bold mb-8 dark:text-white">Student Projects Showcase</h1>
         
         <Tabs defaultValue="Major Projects" className="w-full">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="Micro Projects">Micro Projects</TabsTrigger>
-            <TabsTrigger value="Mini Projects">Mini Projects</TabsTrigger>
-            <TabsTrigger value="Major Projects">Major Projects</TabsTrigger>
+            <TabsTrigger value="Micro Projects" className="dark:text-gray-300">Micro Projects</TabsTrigger>
+            <TabsTrigger value="Mini Projects" className="dark:text-gray-300">Mini Projects</TabsTrigger>
+            <TabsTrigger value="Major Projects" className="dark:text-gray-300">Major Projects</TabsTrigger>
           </TabsList>
           
           {Object.entries(projectCategories).map(([category, projects]) => (
             <TabsContent key={category} value={category} className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.map((project, index) => (
-                  <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-shadow">
+                  <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <FileCode className="h-5 w-5" />
+                      <CardTitle className="flex items-center gap-2 dark:text-white">
+                        <FileCode className="h-5 w-5 dark:text-gray-400" />
                         {project.title}
                       </CardTitle>
-                      <CardDescription>{project.description}</CardDescription>
+                      <CardDescription className="dark:text-gray-400">{project.description}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow">
-                      <p className="text-sm text-gray-500 mb-4">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                         <strong>Technologies:</strong> {project.technologies}
                       </p>
                     </CardContent>
-                    <CardFooter className="flex justify-between pt-4 border-t">
-                      <Button variant="outline" size="sm" asChild>
+                    <CardFooter className="flex justify-between pt-4 border-t dark:border-gray-700">
+                      <Button variant="outline" size="sm" asChild className="dark:border-gray-400 dark:text-gray-300">
                         <a 
                           href={project.github} 
                           target="_blank" 
@@ -125,7 +124,7 @@ const Projects = () => {
                           <Github className="h-4 w-4" /> Source Code
                         </a>
                       </Button>
-                      <Button variant="outline" size="sm" asChild>
+                      <Button variant="outline" size="sm" asChild className="dark:border-gray-400 dark:text-gray-300">
                         <a 
                           href={project.demo} 
                           target="_blank" 

@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import MainLayout from "../components/MainLayout";
 import { ExternalLink } from "lucide-react";
@@ -95,30 +94,35 @@ const Resources = () => {
   return (
     <MainLayout>
       <div className="max-w-7xl mx-auto p-6">
-        <h1 className="text-4xl font-bold mb-8 text-grit-800">Learning Resources</h1>
+        <h1 className="text-4xl font-bold mb-8 text-grit-800 dark:text-white">Learning Resources</h1>
         
         <div className="space-y-12">
           {resourceCategories.map((category, index) => (
             <section key={index}>
-              <h2 className="text-2xl font-semibold mb-4 text-grit-800">{category.name}</h2>
-              <p className="text-grit-600 mb-6">{category.description}</p>
+              <h2 className="text-2xl font-semibold mb-4 text-grit-800 dark:text-gray-200">{category.name}</h2>
+              <p className="text-grit-600 dark:text-gray-400 mb-6">{category.description}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.resources.map((resource, resourceIndex) => (
-                  <Card key={resourceIndex} className="glass p-6 hover:shadow-lg transition-shadow">
-                    <h3 className="text-xl font-semibold mb-2 text-grit-800">{resource.title}</h3>
-                    <p className="text-grit-600 mb-4">{resource.description}</p>
+                  <Card 
+                    key={resourceIndex} 
+                    className="glass p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700"
+                  >
+                    <h3 className="text-xl font-semibold mb-2 text-grit-800 dark:text-white">{resource.title}</h3>
+                    <p className="text-grit-600 dark:text-gray-400 mb-4">{resource.description}</p>
+                    
                     {resource.notes && (
                       <div className="mb-4">
-                        <strong className="text-grit-700">Notes:</strong>
-                        <p className="text-grit-600">{resource.notes}</p>
+                        <strong className="text-grit-700 dark:text-gray-300">Notes:</strong>
+                        <p className="text-grit-600 dark:text-gray-400">{resource.notes}</p>
                       </div>
                     )}
+
                     <a
                       href={resource.videoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 transition-colors"
                     >
                       Watch Video <ExternalLink className="ml-2 h-4 w-4" />
                     </a>

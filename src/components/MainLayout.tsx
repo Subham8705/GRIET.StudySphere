@@ -1,23 +1,21 @@
-
 import { useState, useEffect } from 'react';
-import { BookOpen, GraduationCap, LineChart, FileText, Projector, Menu, ArrowLeft } from 'lucide-react';
+import { BookOpen, GraduationCap, LineChart, FileText, Projector, Menu, ArrowLeft, Home } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from '@/components/ThemeToggle';
 
-const MainLayout = ({ children }: { children: React.ReactNode }) => {
+const MainLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isHovering, setIsHovering] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  // Handle automatic sidebar open/close based on hover
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsSidebarOpen(isHovering);
-    }, 200); // Small delay for smoother interaction
-
+    }, 200);
     return () => clearTimeout(timer);
   }, [isHovering]);
 
@@ -26,6 +24,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   };
 
   const menuItems = [
+    { icon: Home, label: 'Home', path: '/' },
     { icon: BookOpen, label: 'Resources', path: '/resources' },
     { icon: GraduationCap, label: 'Placements', path: '/placements' },
     { icon: LineChart, label: 'Analytics', path: '/analytics' },
@@ -34,8 +33,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   ];
 
   return (
-    <div className="min-h-screen flex bg-background">
-      {/* Hover area for sidebar */}
+    <div className="min-h-screen flex bg-background dark:bg-gray-900 transition-colors">
+      {/* Hover Detection */}
       <div
         className="fixed inset-y-0 left-0 w-2 z-50 cursor-pointer"
         onMouseEnter={() => setIsHovering(true)}
@@ -51,16 +50,16 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <div className="h-full glass shadow-xl flex flex-col">
+        <div className="h-full glass dark:bg-gray-800/80 dark:shadow-md shadow-xl flex flex-col">
           <div className="p-6">
-            <h2 className="text-2xl font-semibold text-grit-800">GRIT Resources</h2>
+            <h2 className="text-2xl font-semibold text-grit-800 dark:text-gray-200">GRIET Resources</h2>
           </div>
           <nav className="flex-1 px-4 space-y-2">
             {menuItems.map((item) => (
               <a
                 key={item.label}
                 href={item.path}
-                className="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-grit-100/50 transition-colors"
+                className="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-grit-100/50 dark:hover:bg-gray-700 transition-colors"
               >
                 <item.icon className="h-5 w-5" />
                 <span>{item.label}</span>
@@ -75,36 +74,32 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         "flex-1 transition-all duration-300",
         isSidebarOpen ? "ml-64" : "ml-0"
       )}>
-        <header className="glass sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
+        <header className="glass dark:bg-gray-800 sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="p-2 rounded-lg hover:bg-grit-100/50 transition-colors"
+              className="p-2 rounded-lg hover:bg-grit-100/50 dark:hover:bg-gray-700 transition-colors"
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
             </button>
-            
             {!isHomePage && (
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={handleGoBack}
-                className="flex items-center gap-1"
-              >
+              <Button variant="ghost" size="sm" onClick={handleGoBack} className="flex items-center gap-1 text-gray-700 dark:text-gray-300">
                 <ArrowLeft className="h-4 w-4" />
                 Back
               </Button>
             )}
           </div>
-          
+
+          {/* Theme Toggle */}
           <div className="flex items-center space-x-4">
-            <span className="text-sm text-grit-600">Welcome to GRIT Student Resources</span>
+            <span className="text-sm text-grit-600 dark:text-gray-400">Welcome to GRIET Student Resources</span>
+            <ThemeToggle />
           </div>
         </header>
-        <main className="section-padding">
-          <div className="animate-fade-in">
-            {children}
-          </div>
+
+        {/* Main Section */}
+        <main className="section-padding dark:bg-gray-900 dark:text-gray-200">
+          <div className="animate-fade-in">{children}</div>
         </main>
       </div>
     </div>
