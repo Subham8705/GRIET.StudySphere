@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import MainLayout from "../components/MainLayout";
 import { ExternalLink } from "lucide-react";
@@ -30,7 +31,7 @@ const resourceCategories: ResourceCategory[] = [
         title: "Time Complexity",
         description: "How to Calculate Time Complexity of an Algorithm",
         notes: "Covers Arrays, Linked Lists, Stacks, and Queues",
-        videoUrl: "https://www.youtube.com/watch?v=5_5oE5lgrhw",
+        videoUrl: "https://www.youtube.com/watch?v=STL8ESuETmM",
       },
       {
         title: "Sorting Algorithms",
@@ -97,26 +98,47 @@ const resourceCategories: ResourceCategory[] = [
 ];
 
 const Resources = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  const filteredCategories =
+    selectedCategory === "All"
+      ? resourceCategories
+      : resourceCategories.filter((cat) => cat.name === selectedCategory);
+
   return (
     <MainLayout>
       <div className="max-w-7xl mx-auto p-6">
-        <h1 className="text-4xl font-bold mb-8 text-grit-800 dark:text-white">Learning Resources</h1>
-        
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-bold text-grit-800 dark:text-white">Learning Resources</h1>
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="border dark:border-gray-700 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+          >
+            <option value="All">All Categories</option>
+            {resourceCategories.map((category, idx) => (
+              <option key={idx} value={category.name}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className="space-y-12">
-          {resourceCategories.map((category, index) => (
+          {filteredCategories.map((category, index) => (
             <section key={index}>
               <h2 className="text-2xl font-semibold mb-4 text-grit-800 dark:text-gray-200">{category.name}</h2>
               <p className="text-grit-600 dark:text-gray-400 mb-6">{category.description}</p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.resources.map((resource, resourceIndex) => (
-                  <Card 
-                    key={resourceIndex} 
+                  <Card
+                    key={resourceIndex}
                     className="glass p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700"
                   >
                     <h3 className="text-xl font-semibold mb-2 text-grit-800 dark:text-white">{resource.title}</h3>
                     <p className="text-grit-600 dark:text-gray-400 mb-4">{resource.description}</p>
-                    
+
                     {resource.notes && (
                       <div className="mb-4">
                         <strong className="text-grit-700 dark:text-gray-300">Notes:</strong>
