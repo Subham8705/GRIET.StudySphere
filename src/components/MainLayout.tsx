@@ -33,7 +33,13 @@ const MainLayout = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen flex bg-background dark:bg-gray-900 transition-colors">
+    <div
+      className="min-h-screen flex relative bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('https://sefet.in/assets/img/griet-campus.jpg')" }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-white/70 dark:bg-gray-900/80 backdrop-blur-sm z-0" />
+
       {/* Hover Detection */}
       <div
         className="fixed inset-y-0 left-0 w-2 z-50 cursor-pointer"
@@ -50,7 +56,7 @@ const MainLayout = ({ children }) => {
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <div className="h-full glass dark:bg-gray-800/80 dark:shadow-md shadow-xl flex flex-col">
+        <div className="h-full glass dark:bg-gray-800/80 dark:shadow-md shadow-xl flex flex-col relative z-10">
           <div className="p-6">
             <h2 className="text-2xl font-semibold text-grit-800 dark:text-gray-200">GRIET Resources</h2>
           </div>
@@ -70,10 +76,12 @@ const MainLayout = ({ children }) => {
       </div>
 
       {/* Main Content */}
-      <div className={cn(
-        "flex-1 transition-all duration-300",
-        isSidebarOpen ? "ml-64" : "ml-0"
-      )}>
+      <div
+        className={cn(
+          "flex-1 transition-all duration-300 relative z-10",
+          isSidebarOpen ? "ml-64" : "ml-0"
+        )}
+      >
         <header className="glass dark:bg-gray-800 sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <button
@@ -83,22 +91,31 @@ const MainLayout = ({ children }) => {
               <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
             </button>
             {!isHomePage && (
-              <Button variant="ghost" size="sm" onClick={handleGoBack} className="flex items-center gap-1 text-gray-700 dark:text-gray-300">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleGoBack}
+                className="flex items-center gap-1 text-gray-700 dark:text-gray-300"
+              >
                 <ArrowLeft className="h-4 w-4" />
                 Back
               </Button>
             )}
           </div>
 
-          {/* Theme Toggle */}
           <div className="flex items-center space-x-4">
+            <img
+              src="https://img.collegepravesh.com/2021/06/GRIET-Hyderabad-Logo.png"
+              alt="GRIET Logo"
+              className="h-10 w-10 object-contain"
+            />
             <span className="text-sm text-grit-600 dark:text-gray-400">Welcome to GRIET Student Resources</span>
             <ThemeToggle />
           </div>
         </header>
 
         {/* Main Section */}
-        <main className="section-padding dark:bg-gray-900 dark:text-gray-200">
+        <main className="section-padding dark:bg-transparent dark:text-gray-200">
           <div className="animate-fade-in">{children}</div>
         </main>
       </div>

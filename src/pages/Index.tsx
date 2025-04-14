@@ -49,7 +49,7 @@ const Index = () => {
               Welcome to GRIET Student Resources
             </h1>
             <p className="text-xl text-grit-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Your complete academic companion for success at Gokaraju Rangaraju Institute of Technology
+              Your complete academic companion for success at Gokaraju Rangaraju Institute of Engineering and Technology
             </p>
           </div>
         </section>
