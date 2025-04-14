@@ -27,6 +27,12 @@ const resourceCategories: ResourceCategory[] = [
         videoUrl: "https://www.youtube.com/watch?v=5_5oE5lgrhw",
       },
       {
+        title: "Time Complexity",
+        description: "How to Calculate Time Complexity of an Algorithm",
+        notes: "Covers Arrays, Linked Lists, Stacks, and Queues",
+        videoUrl: "https://www.youtube.com/watch?v=5_5oE5lgrhw",
+      },
+      {
         title: "Sorting Algorithms",
         description: "Learn different sorting techniques and their implementations",
         notes: "Includes Bubble Sort, Quick Sort, and Merge Sort",
