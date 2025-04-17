@@ -3,11 +3,7 @@ export const notesData={
           {
             subject: "Linear Algebra and Function Approximation",
             units: [
-              { name: "Unit 1", link: "/pdfs/la/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/la/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/la/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/la/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/la/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/la/unit1.pdf" },
             ],
           },
           {
@@ -23,31 +19,21 @@ export const notesData={
           {
             subject: "Fundamentals of Electrical Engineering",
             units: [
-              { name: "Unit 1", link: "/pdfs/fee/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/fee/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/fee/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/fee/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/fee/unit5.pdf" },
+              { name: "Unit 1 to 5", link: "/pdfs/fee/unit1t5.pdf" },
             ],
           },
           {
             subject: "Design Thinking",
             units: [
-              { name: "Unit 1", link: "/pdfs/dt/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/dt/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/dt/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/dt/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/dt/unit5.pdf" },
+              { name: "Unit 1 to 5", link: "/pdfs/dt/unit1t5.pdf" },
             ],
           },
           {
             subject: "Engineering Chemistry",
             units: [
               { name: "Unit 1", link: "/pdfs/ec/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/ec/unit2.pdf" },
               { name: "Unit 3", link: "/pdfs/ec/unit3.pdf" },
               { name: "Unit 4", link: "/pdfs/ec/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/ec/unit5.pdf" },
             ],
           },
         ],
@@ -66,6 +52,7 @@ export const notesData={
           {
             subject: "Applied Physics",
             units: [
+              { name: "All Derivations", link: "/pdfs/ap/alldev.pdf" },
               { name: "Unit 1", link: "/pdfs/ap/unit1.pdf" },
               { name: "Unit 2", link: "/pdfs/ap/unit2.pdf" },
               { name: "Unit 3", link: "/pdfs/ap/unit3.pdf" },
@@ -76,31 +63,19 @@ export const notesData={
           {
             subject: "English",
             units: [
-              { name: "Unit 1", link: "/pdfs/eng/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/eng/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/eng/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/eng/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/eng/unit5.pdf" },
+              { name: "English Lab Manual", link: "/pdfs/eng/labmn.pdf" },
             ],
           },
           {
             subject: "Data Structures",
             units: [
-              { name: "Unit 1", link: "/pdfs/ds/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/ds/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/ds/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/ds/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/ds/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/ds/unit1.pdf" },
             ],
           },
           {
             subject: "Graphics For Engineers",
             units: [
-              { name: "Unit 1", link: "/pdfs/gfe/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/gfe/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/gfe/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/gfe/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/gfe/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/gfe/unit1.pdf" },
             ],
           },
         ],
@@ -168,51 +143,31 @@ export const notesData={
           {
             subject: "Design and Analysis of Algorithms",
             units: [
-              { name: "Unit 1", link: "/pdfs/daa/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/daa/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/daa/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/daa/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/daa/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/daa/unit1.pdf" },
             ],
           },
           {
             subject: "Computer Organization",
             units: [
-              { name: "Unit 1", link: "/pdfs/co/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/co/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/co/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/co/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/co/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/co/unit1.pdf" },
             ],
           },
           {
             subject: "Economics and Accounting For Engineers",
             units: [
-              { name: "Unit 1", link: "/pdfs/economics/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/economics/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/economics/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/economics/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/economics/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/economics/unit1.pdf" },
             ],
           },
           {
             subject: "Data Communication and Computer Networks",
             units: [
-              { name: "Unit 1", link: "/pdfs/dccn/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/dccn/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/dccn/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/dccn/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/dccn/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/dccn/unit1.pdf" },
             ],
           },
           {
             subject: "Operating Systems",
             units: [
-              { name: "Unit 1", link: "/pdfs/os/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/os/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/os/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/os/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/os/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/os/unit1.pdf" },
             ],
           },
         ],
@@ -220,31 +175,19 @@ export const notesData={
           {
             subject: "Software Engineering",
             units: [
-              { name: "Unit 1", link: "/pdfs/se/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/se/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/se/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/se/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/se/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/se/unit1.pdf" },
             ],
           },
           {
             subject: "Artificial Intelligence",
             units: [
-              { name: "Unit 1", link: "/pdfs/ai/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/ai/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/ai/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/ai/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/ai/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/ai/unit1.pdf" },
             ],
           },
           {
             subject: "Web Programming",
             units: [
-              { name: "Unit 1", link: "/pdfs/wp/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/wp/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/wp/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/wp/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/wp/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/wp/unit1.pdf" },
             ],
           },
         ],
@@ -252,31 +195,19 @@ export const notesData={
           {
             subject: "Automata and Compiler Design",
             units: [
-              { name: "Unit 1", link: "/pdfs/acd/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/acd/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/acd/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/acd/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/acd/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/acd/unit1.pdf" },
             ],
           },
           {
             subject: "Machine Learning",
             units: [
-              { name: "Unit 1", link: "/pdfs/ml/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/ml/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/ml/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/ml/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/ml/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/ml/unit1.pdf" },
             ],
           },
           {
             subject: "Full Stack Development",
             units: [
-              { name: "Unit 1", link: "/pdfs/fsd/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/fsd/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/fsd/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/fsd/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/fsd/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/fsd/unit1.pdf" },
             ],
           },
         ],
@@ -284,21 +215,13 @@ export const notesData={
           {
             subject: "Fundamentals of Management and Entrepreneurship",
             units: [
-              { name: "Unit 1", link: "/pdfs/fme/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/fme/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/fme/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/fme/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/fme/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/fme/unit1.pdf" },
             ],
           },
           {
             subject: "Middleware Technologies",
             units: [
-              { name: "Unit 1", link: "/pdfs/middleware/unit1.pdf" },
-              { name: "Unit 2", link: "/pdfs/middleware/unit2.pdf" },
-              { name: "Unit 3", link: "/pdfs/middleware/unit3.pdf" },
-              { name: "Unit 4", link: "/pdfs/middleware/unit4.pdf" },
-              { name: "Unit 5", link: "/pdfs/middleware/unit5.pdf" },
+              { name: "No Notes Available", link: "/pdfs/middleware/unit1.pdf" },
             ],
           },
         ],
