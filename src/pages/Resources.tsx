@@ -215,10 +215,43 @@ const resourceCategories: ResourceCategory[] = [
       },
     ],
   },
+  {
+    name: "Database Management System",
+    description: "Comprehensive Database resources",
+    resources:[
+      {
+        title: "Theories of DBMS",
+        description: "All theories in DBMS",
+        notes: "Covers almost all topics you need to know about DBMS",
+        videoUrl: "https://www.youtube.com/watch?v=T7AxM7Vqvaw&list=PLdo5W4Nhv31b33kF46f9aFjoJPOkdlsRc",
+      },
+      {
+        title: "Oracle SQL",
+        description: "Oracle SQL Tutorial and Questions",
+        notes: "Covers about the SQL commands used in oracle",
+        videoUrl: "https://www.youtube.com/watch?v=ObbNGhcxXJA",
+      },
+      {
+        title: "MongoDB Tutorial",
+        description: "Tutorial which teaches basics about MongoDB",
+        notes: "Covers about the MongoDB",
+        videoUrl: "https://www.youtube.com/watch?v=J6mDkcqU_ZE",
+      },
+    ]
+  },
 ];
+
 
 const Resources = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
+
+  const toggleCategoryExpansion = (categoryName: string) => {
+    setExpandedCategories((prev) => ({
+      ...prev,
+      [categoryName]: !prev[categoryName],
+    }));
+  };
 
   const filteredCategories =
     selectedCategory === "All"
@@ -227,13 +260,13 @@ const Resources = () => {
 
   return (
     <MainLayout>
-      <div className="max-w-7xl mx-auto p-6">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold text-grit-800 dark:text-white">Learning Resources</h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-grit-800 dark:text-white">Learning Resources</h1>
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="border dark:border-gray-700 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+            className="w-full sm:w-auto border dark:border-gray-700 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
           >
             <option value="All">All Categories</option>
             {resourceCategories.map((category, idx) => (
@@ -245,40 +278,61 @@ const Resources = () => {
         </div>
 
         <div className="space-y-12">
-          {filteredCategories.map((category, index) => (
-            <section key={index}>
-              <h2 className="text-2xl font-semibold mb-4 text-grit-800 dark:text-gray-200">{category.name}</h2>
-              <p className="text-grit-600 dark:text-gray-400 mb-6">{category.description}</p>
+          {filteredCategories.map((category, index) => {
+            const isExpanded = expandedCategories[category.name];
+            const resourcesToShow =
+              selectedCategory === "All" && !isExpanded ? category.resources.slice(0, 3) : category.resources;
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.resources.map((resource, resourceIndex) => (
-                  <Card
-                    key={resourceIndex}
-                    className="glass p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700"
-                  >
-                    <h3 className="text-xl font-semibold mb-2 text-grit-800 dark:text-white">{resource.title}</h3>
-                    <p className="text-grit-600 dark:text-gray-400 mb-4">{resource.description}</p>
+            return (
+              <section key={index}>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-grit-800 dark:text-gray-200">
+                  {category.name}
+                </h2>
+                <p className="text-grit-600 dark:text-gray-400 mb-6">{category.description}</p>
 
-                    {resource.notes && (
-                      <div className="mb-4">
-                        <strong className="text-grit-700 dark:text-gray-300">Notes:</strong>
-                        <p className="text-grit-600 dark:text-gray-400">{resource.notes}</p>
-                      </div>
-                    )}
-
-                    <a
-                      href={resource.videoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 transition-colors"
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {resourcesToShow.map((resource, resourceIndex) => (
+                    <Card
+                      key={resourceIndex}
+                      className="glass p-4 sm:p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700"
                     >
-                      Watch Video <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </Card>
-                ))}
-              </div>
-            </section>
-          ))}
+                      <h3 className="text-lg sm:text-xl font-semibold mb-2 text-grit-800 dark:text-white">
+                        {resource.title}
+                      </h3>
+                      <p className="text-grit-600 dark:text-gray-400 mb-4">{resource.description}</p>
+
+                      {resource.notes && (
+                        <div className="mb-4">
+                          <strong className="text-grit-700 dark:text-gray-300">Notes:</strong>
+                          <p className="text-grit-600 dark:text-gray-400">{resource.notes}</p>
+                        </div>
+                      )}
+
+                      <a
+                        href={resource.videoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 transition-colors"
+                      >
+                        Watch Video <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Card>
+                  ))}
+                </div>
+
+                {selectedCategory === "All" && category.resources.length > 3 && (
+                  <div className="mt-4 text-center">
+                    <button
+                      onClick={() => toggleCategoryExpansion(category.name)}
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 font-medium text-base sm:text-lg px-4 py-2"
+                    >
+                      {isExpanded ? "Show Less" : "Show More"}
+                    </button>
+                  </div>
+                )}
+              </section>
+            );
+          })}
         </div>
       </div>
     </MainLayout>

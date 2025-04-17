@@ -11,6 +11,7 @@ import Placements from "./pages/Placements";
 import PreviousPapers from "./pages/PreviousPapers";
 import Projects from "./pages/Projects";
 import Analytics from "./pages/Analytics";
+import Notes from "./pages/Notes";
 
 const queryClient = new QueryClient();
 
@@ -26,7 +27,8 @@ const App = () => (
           <Route path="/placements" element={<Placements />} />
           <Route path="/papers" element={<PreviousPapers />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/analytics" element={<Analytics />} />
+          {/* <Route path="/analytics" element={<Analytics />} /> */}
+          <Route path="/notes" element={<Notes />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

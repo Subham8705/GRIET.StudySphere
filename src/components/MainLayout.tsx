@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BookOpen, GraduationCap, LineChart, FileText, Projector, Menu, ArrowLeft, Home } from 'lucide-react';
+import { BookOpen, GraduationCap, LineChart, FileText, Projector, Menu, ArrowLeft, Home, NotebookPen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -27,18 +27,19 @@ const MainLayout = ({ children }) => {
     { icon: Home, label: 'Home', path: '/' },
     { icon: BookOpen, label: 'Resources', path: '/resources' },
     { icon: GraduationCap, label: 'Placements', path: '/placements' },
-    { icon: LineChart, label: 'Analytics', path: '/analytics' },
+    // { icon: LineChart, label: 'Analytics', path: '/analytics' },
+    {icon: NotebookPen, label: 'Notes', path: '/notes'},
     { icon: FileText, label: 'Previous Papers', path: '/papers' },
     { icon: Projector, label: 'Projects', path: '/projects' },
   ];
 
   return (
     <div
-      className="min-h-screen flex relative bg-cover bg-center bg-no-repeat"
+      className="min-h-screen flex relative bg-fixed bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('https://sefet.in/assets/img/griet-campus.jpg')" }}
     >
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-white/70 dark:bg-gray-900/80 backdrop-blur-sm z-0" />
+      <div className="absolute inset-0 bg-white/70 dark:bg-gray-900/80 z-0" />
 
       {/* Hover Detection */}
       <div

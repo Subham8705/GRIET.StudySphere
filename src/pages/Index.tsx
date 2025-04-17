@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../components/MainLayout';
 import { Card } from '@/components/ui/card';
-import { GraduationCap, BookOpen, LineChart, Projector } from 'lucide-react';
+import { GraduationCap, BookOpen, FileText, Projector } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -20,11 +20,11 @@ const Index = () => {
       link: "/placements"
     },
     {
-      icon: LineChart,
-      title: "Performance Analytics",
-      description: "Monitor academic progress and identify improvement areas",
-      link: "/analytics"
-    },
+      icon: FileText,
+      title: "Previous Sem Papers",
+      description: "Access past semester question papers to prepare effectively",
+      link: "/papers"
+    },    
     {
       icon: Projector,
       title: "Project Showcase",
