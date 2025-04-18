@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../components/MainLayout';
 import { Card } from '@/components/ui/card';
-import { GraduationCap, BookOpen, FileText, Projector } from 'lucide-react';
+import { BookOpen, FileText, Projector,NotebookTabs } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Index = () => {
       link: "/resources"
     },
     {
-      icon: BookOpen,
+      icon: NotebookTabs,
       title: "Notes",
       description: "Find semester-wise subject notes with unit-wise PDFs for easy reference",
       link: "/notes"
