@@ -14,11 +14,11 @@ const Index = () => {
       link: "/resources"
     },
     {
-      icon: GraduationCap,
-      title: "Placement Support",
-      description: "Track placement statistics and prepare with industry insights",
-      link: "/placements"
-    },
+      icon: BookOpen,
+      title: "Notes",
+      description: "Find semester-wise subject notes with unit-wise PDFs for easy reference",
+      link: "/notes"
+    },    
     {
       icon: FileText,
       title: "Previous Sem Papers",
