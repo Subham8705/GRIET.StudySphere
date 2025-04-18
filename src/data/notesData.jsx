@@ -3,7 +3,11 @@ export const notesData={
           {
             subject: "Linear Algebra and Function Approximation",
             units: [
-              { name: "No Notes Available", link: "/pdfs/la/unit1.pdf" },
+              { name: "No Notes Available", link: "/pdfs/lafa/unit1.pdf" },
+              { name: "No Notes Available", link: "/pdfs/lafa/unit1.pdf" },
+              { name: "Unit 3", link: "/pdfs/lafa/unit3.pdf" },
+              { name: "Unit 4 part-1", link: "/pdfs/lafa/unit4p1.pdf" },
+              { name: "Unit 5", link: "/pdfs/lafa/unit5.pdf" },
             ],
           },
           {
@@ -34,6 +38,7 @@ export const notesData={
               { name: "Unit 1", link: "/pdfs/ec/unit1.pdf" },
               { name: "Unit 3", link: "/pdfs/ec/unit3.pdf" },
               { name: "Unit 4", link: "/pdfs/ec/unit4.pdf" },
+              { name: " EC Observation", link: "/pdfs/ec/eclobs.pdf" },
             ],
           },
         ],
@@ -75,7 +80,7 @@ export const notesData={
           {
             subject: "Graphics For Engineers",
             units: [
-              { name: "No Notes Available", link: "/pdfs/gfe/unit1.pdf" },
+              { name: "GE Solutions", link: "/pdfs/ge/gesol.pdf" },
             ],
           },
         ],
