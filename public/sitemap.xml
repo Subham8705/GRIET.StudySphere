@@ -13,7 +13,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grietstudysphere.vercel.app/analytics</loc>
+    <loc>https://grietstudysphere.vercel.app/notes</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -24,5 +24,4 @@
     <loc>https://grietstudysphere.vercel.app/projects</loc>
     <priority>0.8</priority>
   </url>
-  <!-- Add more <url> entries for other important routes -->
 </urlset>
