@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import MainLayout from "../components/MainLayout";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
 
 interface Resource {
   title: string;
@@ -242,9 +242,15 @@ const resourceCategories: ResourceCategory[] = [
 ];
 
 
+const getYoutubeEmbedUrl = (url: string) => {
+  const videoId = new URL(url).searchParams.get("v");
+  return `https://www.youtube.com/embed/${videoId}`;
+};
+
 const Resources = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   const toggleCategoryExpansion = (categoryName: string) => {
     setExpandedCategories((prev) => ({
@@ -265,7 +271,10 @@ const Resources = () => {
           <h1 className="text-3xl sm:text-4xl font-bold text-grit-800 dark:text-white">Learning Resources</h1>
           <select
             value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
+            onChange={(e) => {
+              setSelectedCategory(e.target.value);
+              setActiveVideo(null); // Reset open video when category changes
+            }}
             className="w-full sm:w-auto border dark:border-gray-700 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
           >
             <option value="All">All Categories</option>
@@ -281,7 +290,9 @@ const Resources = () => {
           {filteredCategories.map((category, index) => {
             const isExpanded = expandedCategories[category.name];
             const resourcesToShow =
-              selectedCategory === "All" && !isExpanded ? category.resources.slice(0, 3) : category.resources;
+              selectedCategory === "All" && !isExpanded
+                ? category.resources.slice(0, 3)
+                : category.resources;
 
             return (
               <section key={index}>
@@ -291,33 +302,50 @@ const Resources = () => {
                 <p className="text-grit-600 dark:text-gray-400 mb-6">{category.description}</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {resourcesToShow.map((resource, resourceIndex) => (
-                    <Card
-                      key={resourceIndex}
-                      className="glass p-4 sm:p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700"
-                    >
-                      <h3 className="text-lg sm:text-xl font-semibold mb-2 text-grit-800 dark:text-white">
-                        {resource.title}
-                      </h3>
-                      <p className="text-grit-600 dark:text-gray-400 mb-4">{resource.description}</p>
+                  {resourcesToShow.map((resource, resourceIndex) => {
+                    const embedUrl = getYoutubeEmbedUrl(resource.videoUrl);
+                    const isActive = activeVideo === embedUrl;
 
-                      {resource.notes && (
-                        <div className="mb-4">
-                          <strong className="text-grit-700 dark:text-gray-300">Notes:</strong>
-                          <p className="text-grit-600 dark:text-gray-400">{resource.notes}</p>
-                        </div>
-                      )}
-
-                      <a
-                        href={resource.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 transition-colors"
+                    return (
+                      <Card
+                        key={resourceIndex}
+                        className="glass p-4 sm:p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700"
                       >
-                        Watch Video <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
-                    </Card>
-                  ))}
+                        <h3 className="text-lg sm:text-xl font-semibold mb-2 text-grit-800 dark:text-white">
+                          {resource.title}
+                        </h3>
+                        <p className="text-grit-600 dark:text-gray-400 mb-4">{resource.description}</p>
+
+                        {resource.notes && (
+                          <div className="mb-4">
+                            <strong className="text-grit-700 dark:text-gray-300">Notes:</strong>
+                            <p className="text-grit-600 dark:text-gray-400">{resource.notes}</p>
+                          </div>
+                        )}
+
+                        <button
+                          onClick={() => setActiveVideo(isActive ? null : embedUrl)}
+                          className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 transition-colors font-medium"
+                        >
+                          {isActive ? "Hide Video" : "Watch Video"}
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </button>
+
+                        {isActive && (
+                          <div className="mt-4 aspect-w-16 aspect-h-9">
+                            <iframe
+                              src={embedUrl}
+                              title={resource.title}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                              className="w-full h-64 sm:h-72 rounded-lg"
+                            ></iframe>
+                          </div>
+                        )}
+                      </Card>
+                    );
+                  })}
                 </div>
 
                 {selectedCategory === "All" && category.resources.length > 3 && (
