@@ -72,6 +72,8 @@ export const notesData={
             subject: "English",
             units: [
               { name: "English Lab Manual", link: "/pdfs/eng/labmn.pdf" },
+              { name: "Unit 4", link: "/pdfs/eng/unit4.pdf" },
+              { name: "Unit 5", link: "/pdfs/eng/unit5.pdf" },
             ],
           },
           {
