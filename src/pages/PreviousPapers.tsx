@@ -55,6 +55,10 @@ const PreviousPapers = () => {
         subject: "Probability And Statistics II-I",
         link: "https://drive.google.com/file/d/1za1NH88jDYvBfd7MurXjNdy9fI6ZSaZd/view?usp=sharing",
       },
+      {
+        subject: "Discrete Mathematics II-I",
+        link: "https://drive.google.com/file/d/16I1Z_HaRskXZnBPKpIHVH1wGRUlaIHf8/view?usp=sharing",
+      },
     ],
     "Third Year": [
       {
