@@ -10,12 +10,16 @@ const PreviousPapers = () => {
         link: "https://drive.google.com/file/d/1Ic4pzmjegIDYvyiD8Oi7f-R84jYyTLtG/view?usp=sharing",
       },
       {
+        subject: "Linear Algebra And Differential Calculus I-I",
+        link: "https://drive.google.com/file/d/1-Oa2ycK3oqfdXbBoFnHkpOrAx8WWbTRx/view?usp=sharing",
+      },
+      {
         subject: "Programming for Problem Solving I-I",
         link: "https://drive.google.com/file/d/1WNztUiCn9QvRDznUwz9Rmm_xtKFFKdXL/view?usp=drive_link",
       },
       {
         subject: "Data Structures and Algorithms I-II",
-        link: "https://drive.google.com/file/d/1D8HuBzGWagJhlys7WeLNsaZybkyWewwk/view?usp=drive_link",
+        link: "https://drive.google.com/drive/folders/1gqmru-dvR-D-tPQ8g0YsAWO7wFfe_8zU?usp=sharing",
       },
       {
         subject: "DEVC I-II",

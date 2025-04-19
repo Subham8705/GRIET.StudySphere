@@ -21,6 +21,7 @@ export const notesData={
             subject: "Fundamentals of Electrical Engineering",
             units: [
               { name: "Unit 1 to 5", link: "/pdfs/fee/unit1t5.pdf" },
+              { name: "FEE Lab Manual", link: "/pdfs/fee/feellab.pdf" },
             ],
           },
           {
@@ -78,6 +79,7 @@ export const notesData={
             subject: "Graphics For Engineers",
             units: [
               { name: "Module Answers of Unit 2,3,4", link: "/pdfs/ge/unit234.pdf" },
+              { name: "GE Material", link: "/pdfs/ge/gemat.pdf" },
             ],
           },
         ],
