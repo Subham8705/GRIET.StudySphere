@@ -77,8 +77,11 @@ export const notesData={
             ],
           },
           {
-            subject: "Data Structures",
+            subject: "Data Structures And Algorithms",
             units: [
+              { name: "Unit 1", link: "/pdfs/ds/unit1.pdf" },
+              { name: "Unit 2", link: "/pdfs/ds/unit2.pdf" },
+              { name: "Unit 3 - Part 1", link: "/pdfs/ds/unit3p1.pdf" },
               { name: "Mid 2 Important Question", link: "/pdfs/ds/mid2imp.pdf" },
               { name: "Question Bank", link: "/pdfs/ds/qb.pdf" },
             ],
