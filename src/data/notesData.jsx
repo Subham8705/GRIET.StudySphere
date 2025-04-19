@@ -5,6 +5,11 @@ export const notesData={
             units: [
               { name: "Unit 3", link: "/pdfs/lafa/unit3.pdf" },
               { name: "Unit 5", link: "/pdfs/lafa/unit5.pdf" },
+              { name: "Unit 1 - Practice Questions", link: "/pdfs/lafa/unit1pq.pdf" },
+              { name: "Unit 2 - Practice Questions", link: "/pdfs/lafa/unit2pq.pdf" },
+              { name: "Unit 3 - Practice Questions", link: "/pdfs/lafa/unit3pq.pdf" },
+              { name: "Unit 4 - Practice Questions", link: "/pdfs/lafa/unit4pq.pdf" },
+              { name: "Unit 5 - Practice Questions", link: "/pdfs/lafa/unit5pq.pdf" },
             ],
           },
           {
