@@ -7,11 +7,15 @@ const PreviousPapers = () => {
     "First Year": [
       {
         subject: "Engineering Chemistry I-I",
-        link: "https://drive.google.com/file/d/1Ic4pzmjegIDYvyiD8Oi7f-R84jYyTLtG/view?usp=sharing",
+        link: "https://drive.google.com/drive/folders/1iVaD9igfex8ZNhbzXofL-vadWgW6nxwH?usp=sharing",
       },
       {
-        subject: "Linear Algebra And Differential Calculus I-I",
-        link: "https://drive.google.com/file/d/1-Oa2ycK3oqfdXbBoFnHkpOrAx8WWbTRx/view?usp=sharing",
+        subject: "Linear Algebra And Function Approximation I-I",
+        link: "https://drive.google.com/drive/folders/16bsXZX8zMmt-Pg_-124WNzj1B3gqzASn?usp=sharing",
+      },
+      {
+        subject: "Fundamentals Of Electrical Engineering I-I",
+        link: "https://drive.google.com/drive/folders/1pOpftP2YrOFh5_5kOvSvV0qV5XQpkIj8?usp=sharing",
       },
       {
         subject: "Programming for Problem Solving I-I",
@@ -26,8 +30,16 @@ const PreviousPapers = () => {
         link: "https://drive.google.com/drive/folders/10D2y6rk58Kp2ntkyz-DZheaoxusPqJqQ",
       },
       {
+        subject: "Applied Physics I-II",
+        link: "https://drive.google.com/drive/folders/1i1zRC9zJaqCS3RIiToxLbXlXR6Am5nsw?usp=sharing",
+      },
+      {
         subject: "Graphical Engineering I-II",
-        link: "https://drive.google.com/file/d/1ZsHuILM4PvE53SX14AgAGn187uWtvbcw/view?usp=drive_link",
+        link: "https://drive.google.com/drive/folders/1lnaVe5FQB68VVb910xUKyNwZI2vvigcQ?usp=sharing",
+      },
+      {
+        subject: "English I-II",
+        link: "https://drive.google.com/drive/folders/1CFO7gM_giQtBkBmo9SfOUQDpPvwOdyXo?usp=sharing",
       },
     ],
     "Second Year": [
@@ -36,12 +48,12 @@ const PreviousPapers = () => {
         link: "https://drive.google.com/file/d/1bfUmeBqFaeZYJK3DtK7ACLaOrWkeUs6A/view?usp=drive_link",
       },
       {
-        subject: "Digital Logic Design",
-        link: "https://drive.google.com/file/sample5",
+        subject: "Digital Logic Design II-I",
+        link: "https://drive.google.com/file/d/1M9TKMRFNDDCU9hCJ93DTyqm-eVy52iAJ/view?usp=sharing",
       },
       {
-        subject: "Object Oriented Programming",
-        link: "https://drive.google.com/file/sample6",
+        subject: "Probability And Statistics II-I",
+        link: "https://drive.google.com/file/d/1za1NH88jDYvBfd7MurXjNdy9fI6ZSaZd/view?usp=sharing",
       },
     ],
     "Third Year": [
