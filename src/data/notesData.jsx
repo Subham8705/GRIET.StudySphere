@@ -79,7 +79,8 @@ export const notesData={
           {
             subject: "Data Structures",
             units: [
-              { name: "No Notes Available", link: "/pdfs/ds/unit1.pdf" },
+              { name: "Mid 2 Important Question", link: "/pdfs/ds/mid2imp.pdf" },
+              { name: "Question Bank", link: "/pdfs/ds/qb.pdf" },
             ],
           },
           {
