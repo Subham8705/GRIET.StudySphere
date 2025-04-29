@@ -81,7 +81,7 @@ const Index = () => {
         <section className="glass rounded-2xl p-8 dark:bg-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-grit-800 dark:text-white mb-2">95%</div>
+              <div className="text-4xl font-bold text-grit-800 dark:text-white mb-2">87%</div>
               <div className="text-grit-600 dark:text-gray-400">Placement Rate</div>
             </div>
             <div className="text-center">

@@ -12,7 +12,6 @@ import PreviousPapers from "./pages/PreviousPapers";
 import Projects from "./pages/Projects";
 import Analytics from "./pages/Analytics";
 import Notes from "./pages/Notes";
-
 const queryClient = new QueryClient();
 
 const App = () => (
