@@ -8,25 +8,32 @@ const Projects = () => {
   const projectCategories = {
     "Micro Projects": [
       {
-        title: "Weather App",
-        description: "A simple weather application using OpenWeatherMap API",
-        technologies: "HTML, CSS, JavaScript",
-        github: "https://github.com/freeCodeCamp/weather-app",
-        demo: "https://reactjs-weather-app.netlify.app/",
-      },
-      {
-        title: "Todo List Manager",
+        title: "Task Talk",
         description: "A task management application with local storage",
         technologies: "React, Tailwind CSS",
-        github: "https://github.com/ainthowry/React-Todo-List",
-        demo: "https://react-todo-app-v2.netlify.app/",
+        github: "https://github.com/rusheeka/tasktalk.git",
+        demo: "https://task-talk.vercel.app/",
       },
       {
-        title: "Calculator",
-        description: "A functional calculator with basic operations",
+        title: "Labour Connect Worklink",
+        description: "A simple weather application using OpenWeatherMap API",
+        technologies: "React, CSS, Node, Express, MongoDB",
+        github: "https://github.com/freeCodeCamp/weather-app",
+        demo: "",
+      },
+      {
+        title: "ChatBot Extension",
+        description: "A chatbot extension which helps user by giving suggestions how to chat professionaly.",
         technologies: "HTML, CSS, JavaScript",
-        github: "https://github.com/ahfarmer/calculator",
-        demo: "https://ahfarmer.github.io/calculator/",
+        github: "https://github.com/mvnsneha/chatextension",
+        demo: "",
+      },
+      {
+        title: "Geo",
+        description: "A task management application with local storage",
+        technologies: "React, Tailwind CSS",
+        github: "https://github.com/rusheeka/tasktalk.git",
+        demo: "https://task-talk.vercel.app/",
       },
     ],
     "Mini Projects": [
