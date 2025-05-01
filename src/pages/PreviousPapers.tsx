@@ -59,10 +59,39 @@ const PreviousPapers = () => {
         subject: "Discrete Mathematics II-I",
         link: "https://drive.google.com/file/d/16I1Z_HaRskXZnBPKpIHVH1wGRUlaIHf8/view?usp=sharing",
       },
+      {
+        subject: "Operating System II-II",
+        link: "https://drive.google.com/drive/folders/1AjZDk3Lfj6h-tS8W2zhSPQ5Sr1_VN-Yg?usp=sharing",
+      },
+      {
+        subject: "Effective Technical Communication II-II",
+        link: "https://drive.google.com/drive/folders/1FFKuuyulUiVXClkIPIb0QfTqq62nue2J?usp=sharing",
+      },
+      {
+        subject: "Design and Analysis Of Algorithms II-II",
+        link: "https://drive.google.com/drive/folders/1YhGznKnC8EE5nSqCenqJek1Eko3O6G9F?usp=drive_link",
+      },
+      {
+        subject: "Economics and Accounting For Engineers II-II",
+        link: "https://drive.google.com/drive/folders/1zO9D_om78H94fsb7hte5wADbK56uxyYB?usp=sharing",
+      },
+      {
+        subject: "Computer Organisation II-II",
+        link: "https://drive.google.com/drive/folders/1xhKRFeeiQHT03OIHqp_rx6SXCLWUGy_l?usp=sharing",
+      },
+      {
+        subject: "Environmental Science II-II",
+        link: "https://drive.google.com/drive/folders/1awhcl5AI1cqxht5OZ4Ab2eZ64tqyf-tg?usp=sharing",
+      },
+      {
+        subject: "Data Communication and Computer Networks II-II",
+        link: "https://drive.google.com/drive/folders/1sm-valp3WSuIC5abWImufd6UDGi8njJy?usp=sharing",
+      },
+      
     ],
     "Third Year": [
       {
-        subject: "Database Management Systems",
+        subject: "Full Stack Development III-II",
         link: "https://drive.google.com/file/sample7",
       },
       {
