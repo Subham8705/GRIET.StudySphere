@@ -4,11 +4,12 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 const Placements = () => {
   const yearWisePlacements = [
-    { year: '2019', placements: 850, companies: 120 },
-    { year: '2020', placements: 920, companies: 135 },
-    { year: '2021', placements: 980, companies: 150 },
-    { year: '2022', placements: 1050, companies: 165 },
-    { year: '2023', placements: 1100, companies: 180 },
+    { year: '2019', placements: 796, companies: 120 },
+    { year: '2020', placements: 928, companies: 135 },
+    { year: '2021', placements: 1400, companies: 150 },
+    { year: '2022', placements: 2200, companies: 165 },
+    { year: '2023', placements: 1400, companies: 180 },
+    { year: '2024', placements: 800, companies: 180 },
   ];
 
   const sectorWiseData = [
@@ -21,15 +22,15 @@ const Placements = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
   const topCompanies = [
-    "Microsoft", "Amazon", "Infosys", "TCS", "Wipro",
-    "Accenture", "Cognizant", "IBM", "Tech Mahindra", "Capgemini"
+    "JP Morgan", "PayPal", "Oracle", "TCS(Digital)", "Wipro",
+    "Accenture", "Cognizant", "Infosys", "Amazon", "Capgemini"
   ];
 
   const salaryRanges = [
-    { range: '3-5 LPA', percentage: 35 },
-    { range: '5-8 LPA', percentage: 40 },
-    { range: '8-12 LPA', percentage: 15 },
-    { range: '12+ LPA', percentage: 10 },
+    { range: '3-5 LPA', percentage: 32 },
+    { range: '5-8 LPA', percentage: 43 },
+    { range: '8-12 LPA', percentage: 18 },
+    { range: '12+ LPA', percentage: 7 },
   ];
 
   return (
@@ -44,8 +45,8 @@ const Placements = () => {
               <CardTitle className="dark:text-white">Average Placement Rate</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold dark:text-gray-300">95%</p>
-              <p className="text-sm text-muted-foreground dark:text-gray-400">Last 5 years</p>
+              <p className="text-4xl font-bold dark:text-gray-300">87%</p>
+              <p className="text-sm text-muted-foreground dark:text-gray-400">Last 3 years</p>
             </CardContent>
           </Card>
           <Card className="glass dark:bg-gray-800">
@@ -53,8 +54,8 @@ const Placements = () => {
               <CardTitle className="dark:text-white">Highest Package</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold dark:text-gray-300">45 LPA</p>
-              <p className="text-sm text-muted-foreground dark:text-gray-400">2023 Batch</p>
+              <p className="text-4xl font-bold dark:text-gray-300">34.4 LPA</p>
+              <p className="text-sm text-muted-foreground dark:text-gray-400">2024 Batch</p>
             </CardContent>
           </Card>
           <Card className="glass dark:bg-gray-800">
@@ -63,7 +64,7 @@ const Placements = () => {
             </CardHeader>
             <CardContent>
               <p className="text-4xl font-bold dark:text-gray-300">6.5 LPA</p>
-              <p className="text-sm text-muted-foreground dark:text-gray-400">2023 Batch</p>
+              <p className="text-sm text-muted-foreground dark:text-gray-400">2024 Batch</p>
             </CardContent>
           </Card>
         </div>
