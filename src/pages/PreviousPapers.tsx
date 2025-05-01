@@ -92,15 +92,23 @@ const PreviousPapers = () => {
     "Third Year": [
       {
         subject: "Full Stack Development III-II",
-        link: "https://drive.google.com/file/sample7",
+        link: "https://drive.google.com/drive/folders/1zn2g3mD3tj6DaK08uLM0ns01hl_NSQfd?usp=sharing",
       },
       {
-        subject: "Operating Systems",
-        link: "https://drive.google.com/file/sample8",
+        subject: "UNIX Programming III-II",
+        link: "https://drive.google.com/drive/folders/1nQStDwSesunAZUKpr53IRjIPMfr-5Gk1?usp=sharing",
       },
       {
-        subject: "Computer Networks",
-        link: "https://drive.google.com/file/sample9",
+        subject: "Fundamental of Management and Entrepreneurship III-II",
+        link: "https://drive.google.com/drive/folders/1qhMJuPwvSlVwZz1PANWBvE6rsow164ow?usp=sharing",
+      },
+      {
+        subject: "Machine Learning III-II",
+        link: "https://drive.google.com/drive/folders/1yr6Z-VnaPo-YRD4mVwT6W2ZIK0NqkdCd?usp=sharing",
+      },
+      {
+        subject: "Data Visualization III-II",
+        link: "https://drive.google.com/drive/folders/1WP9fnDipWB9xbpeIc4TaBBU9fMWxZeDp?usp=sharing",
       },
     ],
     "Fourth Year": [
