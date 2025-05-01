@@ -28,13 +28,6 @@ const Projects = () => {
         github: "https://github.com/mvnsneha/chatextension",
         demo: "",
       },
-      {
-        title: "Geo",
-        description: "A task management application with local storage",
-        technologies: "React, Tailwind CSS",
-        github: "https://github.com/rusheeka/tasktalk.git",
-        demo: "https://task-talk.vercel.app/",
-      },
     ],
     "Mini Projects": [
       {
