@@ -91,9 +91,9 @@ const Projects = () => {
         
         <Tabs defaultValue="Major Projects" className="w-full">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="Micro Projects" className="dark:text-gray-300">Micro Projects</TabsTrigger>
-            <TabsTrigger value="Mini Projects" className="dark:text-gray-300">Mini Projects</TabsTrigger>
-            <TabsTrigger value="Major Projects" className="dark:text-gray-300">Major Projects</TabsTrigger>
+            <TabsTrigger value="Micro Projects" className="dark:text-black-100">Micro Projects</TabsTrigger>
+            <TabsTrigger value="Mini Projects" className="dark:text-black-100">Mini Projects</TabsTrigger>
+            <TabsTrigger value="Major Projects" className="dark:text-black-100">Major Projects</TabsTrigger>
           </TabsList>
           
           {Object.entries(projectCategories).map(([category, projects]) => (
@@ -114,24 +114,24 @@ const Projects = () => {
                       </p>
                     </CardContent>
                     <CardFooter className="flex justify-between pt-4 border-t dark:border-gray-700">
-                      <Button variant="outline" size="sm" asChild className="dark:border-gray-400 dark:text-gray-300">
+                      <Button variant="outline" size="sm" asChild className="dark:border-gray-400 dark:text-black-300">
                         <a 
                           href={project.github} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex items-center gap-2"
                         >
-                          <Github className="h-4 w-4" /> Source Code
+                          <Github className="h-4 w-4 text-black" /> Source Code
                         </a>
                       </Button>
-                      <Button variant="outline" size="sm" asChild className="dark:border-gray-400 dark:text-gray-300">
+                      <Button variant="outline" size="sm" asChild className="dark:border-gray-400 dark:text-black-300">
                         <a 
                           href={project.demo} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex items-center gap-2"
                         >
-                          <ExternalLink className="h-4 w-4" /> Live Demo
+                          <ExternalLink className="h-4 w-4 text-black" /> Live Demo
                         </a>
                       </Button>
                     </CardFooter>
