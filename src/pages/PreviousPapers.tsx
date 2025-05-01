@@ -113,16 +113,16 @@ const PreviousPapers = () => {
     ],
     "Fourth Year": [
       {
-        subject: "Software Engineering",
-        link: "https://drive.google.com/file/sample10",
+        subject: "Software Project Management IV-II",
+        link: "https://drive.google.com/drive/folders/10suhIptBfFwEBrPx5i0rzWWmTMMkDQfz?usp=sharing",
       },
       {
-        subject: "Machine Learning",
-        link: "https://drive.google.com/file/sample11",
+        subject: "Design Patterns IV-II",
+        link: "https://drive.google.com/drive/folders/1QwDLCASDq1jRUDBnoaxKn2spPccLhGRz?usp=sharing",
       },
       {
-        subject: "Cloud Computing",
-        link: "https://drive.google.com/file/sample12",
+        subject: "E-Commerce IV-II",
+        link: "https://drive.google.com/drive/folders/12rTRnsuQMwcZarYC4MD5tVbzM-LKgzfa?usp=sharing",
       },
     ],
   };
