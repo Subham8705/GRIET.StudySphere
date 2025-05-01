@@ -28,6 +28,13 @@ const Projects = () => {
         github: "https://github.com/mvnsneha/chatextension",
         demo: "",
       },
+      {
+        title: "Gps Attendance System",
+        description: "A way to automate the attendance leveraging GPS technology",
+        technologies: "React, Tailwind CSS, Node, Express, MongoDB",
+        github: "https://github.com/Nikhil-p570/GPS_Attendance_System-",
+        demo: "",
+      },
     ],
     "Mini Projects": [
       {
