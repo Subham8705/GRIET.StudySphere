@@ -158,7 +158,8 @@ export const notesData={
           {
             subject: "Design and Analysis of Algorithms",
             units: [
-              { name: "No Notes Available", link: "/pdfs/daa/unit1.pdf" },
+              { name: "All Algorithms", link: "/pdfs/daa/allalgo.pdf" },
+              { name: "DAA problems examples", link: "/pdfs/daa/daaprob.pdf" },
             ],
           },
           {
