@@ -12,6 +12,7 @@ import PreviousPapers from "./pages/PreviousPapers";
 import Projects from "./pages/Projects";
 import Analytics from "./pages/Analytics";
 import Notes from "./pages/Notes";
+import Footer from "./pages/Footer";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+        <Footer />
     </TooltipProvider>
   </QueryClientProvider>
 );
