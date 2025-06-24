@@ -1,5 +1,5 @@
 export const notesData={
-        "IT - 1st Sem": [
+        "IT,CSE - 1st Sem": [
           {
             subject: "Linear Algebra and Function Approximation",
             units: [
@@ -46,7 +46,7 @@ export const notesData={
           },
         ],
       
-        "IT - 2nd Sem": [
+        "IT,CSE - 2nd Sem": [
           {
             subject: "Differential Equations and Vector Calculus",
             units: [
@@ -170,7 +170,12 @@ export const notesData={
           {
             subject: "Economics and Accounting For Engineers",
             units: [
-              { name: "No Notes Available", link: "/pdfs/economics/unit1.pdf" },
+              { name: "1st Unit", link: "/pdfs/eae/EAE 1.pdf" },
+              { name: "1,2,3 Unit", link: "/pdfs/eae/EAE unit 1 2 3.pdf" },
+              { name: "3rd unit", link: "/pdfs/eae/EAE unit3.pdf" },
+              { name: "4,5 Unit", link: "/pdfs/eae/EAE unit4,5.pdf" },
+              { name: "5th Unit", link: "/pdfs/eae/EAE-Unit5.pdf" },
+              { name: "All Unit", link: "/pdfs/eae/EAE.pdf" },
             ],
           },
           {
