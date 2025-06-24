@@ -187,7 +187,9 @@ export const notesData={
           {
             subject: "Operating Systems",
             units: [
-              { name: "No Notes Available", link: "/pdfs/os/unit1.pdf" },
+              { name: "Mid 2-Important", link: "/pdfs/os/mid2imp.pdf" },
+              { name: "Mid 1-Important", link: "/pdfs/os/mid1imp.pdf" },
+              
             ],
           },
         ],
