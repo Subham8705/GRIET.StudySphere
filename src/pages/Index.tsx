@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../components/MainLayout';
 import { Card } from '@/components/ui/card';
-import { BookOpen, FileText, Projector,NotebookTabs } from 'lucide-react';
+import { BookOpen, FileText, Projector, NotebookTabs } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -18,13 +18,13 @@ const Index = () => {
       title: "Notes",
       description: "Find semester-wise subject notes with unit-wise PDFs for easy reference",
       link: "/notes"
-    },    
+    },
     {
       icon: FileText,
       title: "Previous Sem Papers",
       description: "Access past semester question papers to prepare effectively",
       link: "/papers"
-    },    
+    },
     {
       icon: Projector,
       title: "Project Showcase",
@@ -42,6 +42,23 @@ const Index = () => {
   return (
     <MainLayout>
       <div className="max-w-7xl mx-auto">
+
+        {/* Marquee Banner */}
+        <div className="bg-blue-600 text-white py-2 overflow-hidden rounded-xl mb-6">
+          <div className="flex whitespace-nowrap animate-marquee">
+            <span className="mx-8">
+              🎉 GR24 Question Papers updated! — Mid & Semester papers for 2nd Year are now available. &nbsp;&nbsp;&nbsp;
+              📄 Subjects added: JAVA, Digital Logic Design, Probability & Statistics, Discrete Maths, DBMS, OS, DAA, Economics, CO&A, Full Stack Web Dev &nbsp;&nbsp;&nbsp;
+              👉 Visit the Previous Papers section to access them now!
+            </span>
+            <span className="mx-8">
+              🎉 GR24 Question Papers updated! — Mid & Semester papers for 2nd Year are now available. &nbsp;&nbsp;&nbsp;
+              📄 Subjects added: JAVA, Digital Logic Design, Probability & Statistics, Discrete Maths, DBMS, OS, DAA, Economics, CO&A, Full Stack Web Dev &nbsp;&nbsp;&nbsp;
+              👉 Visit the Previous Papers section to access them now!
+            </span>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="text-center mb-16">
           <div className="glass rounded-2xl p-12 mb-8 dark:bg-gray-800 dark:text-white">
@@ -94,6 +111,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+
       </div>
     </MainLayout>
   );
